@@ -1,7 +1,7 @@
 import { parseUnits, createWalletClient, http, getContract, createPublicClient } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { base } from "viem/chains";
-import { readFromJson } from '../../utils';
+import { readFromJson } from '../../utils/index.js';
 import dotenv from 'dotenv';
 dotenv.config();
 

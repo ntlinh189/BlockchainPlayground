@@ -1,14 +1,22 @@
 {
-  "name": "dappplayground",
+  "name": "blockchainplayground",
   "version": "1.0.0",
   "license": "Unlicense",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "@types/node": "^24.9.2",
+    "bitcoinjs-lib": "^7.0.0",
     "dotenv": "^17.2.3",
     "prettier": "^3.6.2",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
     "viem": "^2.38.5"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "bip32": "^5.0.0",
+    "bip39": "^3.1.0",
+    "ecpair": "^3.0.0",
+    "tiny-secp256k1": "^2.2.4"
   }
 }
