@@ -1,12 +1,8 @@
 import axios from 'axios';
-import { readFromJson } from '../../utils/index.js';
 
-const config = {
-  secretPath: 'scripts/bitcoin/code/secret.json'
-}
+const address = "tb1qvn3lfgvlj2ah34z904eq3pcjc2md7l00jdvekf"
 
 async function main() {
-  const address = readFromJson(config.secretPath, 'address');
   const utxos = (await axios.get(`https://blockstream.info/testnet/api/address/${address}/utxo`)).data;
   let confirmedBalance = utxos.reduce((s: any, u: any) => s + u.value, 0);
 

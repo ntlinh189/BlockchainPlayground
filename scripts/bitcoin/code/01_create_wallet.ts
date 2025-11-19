@@ -2,12 +2,7 @@ import * as bitcoin from "bitcoinjs-lib";
 import * as bip39 from "bip39";
 import { BIP32Factory } from "bip32";
 import * as ecc from "tiny-secp256k1";
-import { saveToJson } from "../../utils/index.js";
 bitcoin.initEccLib(ecc);
-
-const config = {
-  secretPath: 'scripts/bitcoin/code/secret.json'
-}
 
 async function main() {
   const mnemonic = bip39.generateMnemonic();
@@ -25,10 +20,6 @@ async function main() {
 
   console.log("testnet address:", address);
   console.log("private key WIF:", child.toWIF(), '\n');
-
-  saveToJson(config.secretPath, 'mnemonic', mnemonic);
-  saveToJson(config.secretPath, 'address', address!);
-  saveToJson(config.secretPath, 'private', child.toWIF());
 }
 
 main()

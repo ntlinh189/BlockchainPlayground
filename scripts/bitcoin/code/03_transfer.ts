@@ -2,17 +2,13 @@ import axios from 'axios';
 import * as bitcoin from "bitcoinjs-lib";
 import ECPairFactory from 'ecpair';
 import * as ecc from 'tiny-secp256k1';
-import { readFromJson } from '../../utils/index.js';
 bitcoin.initEccLib(ecc);
 
-const config = {
-  secretPath: 'scripts/bitcoin/code/secret.json'
-}
+const address = "tb1qvn3lfgvlj2ah34z904eq3pcjc2md7l00jdvekf";
+const private_key = "cMeYyT936xiHyatStJuGikefFuNzDCL9TYHfGoV4yXmDtwPDWV1Q";
 
 async function main() {
   const ECPair = ECPairFactory(ecc);
-  const address = readFromJson(config.secretPath, 'address');
-  const private_key = readFromJson(config.secretPath, 'private');
   const AMOUNT = 5000n; // sats
   const FEE = 100n; // sats
   const receiver = 'tb1qlj64u6fqutr0xue85kl55fx0gt4m4urun25p7q';
