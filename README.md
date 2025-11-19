@@ -1,2 +1,2 @@
-# DAppPlayground
-A playground for experimenting with interactions across different decentralized applications (DApps) on Ethereum and other EVM chains.
+# BlockchainPlayground
+A playground for experimenting with interactions across different decentralized applications (DApps) on Ethereum and other chains.
